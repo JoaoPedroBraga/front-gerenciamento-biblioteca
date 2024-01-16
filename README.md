@@ -1,2 +1,2 @@
-# front-gerenciamento-biblioteca
-Fron do Desafio 5 da DNC
+# projeto-react-api-node
+Projeto em React com API simples em Node.
