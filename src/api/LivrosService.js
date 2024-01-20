@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8080"
+const BASE_URL = "https://api-xi-plum.vercel.app"
 
 export class LivrosService{
     static getLivros(){
