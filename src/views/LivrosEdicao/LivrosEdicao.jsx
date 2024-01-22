@@ -1,4 +1,5 @@
 import {useEffect , useState} from 'react'
+import { Link } from 'react-router-dom';
 import Header from '../../components/Header/Header'
 import "./index.scss"
 import SubmenuLivros from '../../components/SubmenuLivros/SubmenuLivros'
@@ -35,7 +36,7 @@ const LivrosEdicao = () => {
       livro.editora !=''){
       await LivrosService.updateLivro(Number(livro.id),body)
       .then(({data})=>{
-        alert(data.mensagem)
+        alert("Atualizado")
       })
       .catch(({response:{data,status}})=>{
         alert(`${status} - ${data}`)      
@@ -77,9 +78,11 @@ const LivrosEdicao = () => {
               <input type="text"  required onChange={(event)=>{ setLivro({...livro, editora: event.target.value})}} value={livro.editora || ''}></input>
             </div> 
             <div className='form-group'>
+              <Link to="/livros">
               <button onClick={()=>{
-              editLivro()
-            }}>Atualizar Livro</button>  
+                  editLivro()
+                }}>Atualizar Livro</button>  
+              </Link>
             </div>                   
           </form>
           </div>        
