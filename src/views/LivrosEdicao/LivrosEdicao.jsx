@@ -78,7 +78,7 @@ const LivrosEdicao = () => {
               <input type="text"  required onChange={(event)=>{ setLivro({...livro, editora: event.target.value})}} value={livro.editora || ''}></input>
             </div> 
             <div className='form-group'>
-              <Link to="/livros">
+              <Link to="/">
               <button onClick={()=>{
                   editLivro()
                 }}>Atualizar Livro</button>  
