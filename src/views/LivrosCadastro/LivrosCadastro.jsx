@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import { Link } from 'react-router-dom';
 import Header from '../../components/Header/Header'
 import "./index.scss"
 import SubmenuLivros from '../../components/SubmenuLivros/SubmenuLivros'
@@ -60,9 +61,11 @@ const LivrosCadastro = () => {
             <input type="text" id='editora' required onChange={(event)=>{ setLivro({...livro, editora: event.target.value})}}></input>
           </div> 
           <div className='form-group'>
+            <Link to="/">
             <button onClick={()=>{
-              createLivro()
-            }}>Cadastrar Livro</button>  
+                createLivro()
+              }}>Cadastrar Livro</button> 
+            </Link>
           </div>         
           </form>
         </div>
